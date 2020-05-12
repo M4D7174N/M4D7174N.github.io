@@ -1,0 +1,159 @@
+html {
+    background-image: url("images/bckgd_body.png");
+    background-repeat: repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+body {
+    width: auto;
+    margin: 0 auto;
+}
+div {
+	padding: 0px;
+    font-size: 100%;
+	font: inherit;
+}
+.TOP{
+    background-color: white;
+    box-shadow: 0px 8px 11px -5px rgba(0,0,0,0.45);
+    position: sticky;
+    top: 0;
+}
+.banner {
+    width: 900px;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+span {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 20px;
+}
+img {
+    margin: 10px 0;
+}
+
+#CV {
+    width: 900px;
+    margin: 8px auto 0 auto;
+    display: flex;
+    box-shadow: 0px 0px 11px 2px rgba(0,0,0,0.45);
+}
+.left {
+    width: 30%;
+    margin: 0 auto;
+    float: left;
+    background-color: #DEDEDE;
+    box-shadow: inset -11px 0px 11px -5px rgba(0,0,0,0.45);
+}
+
+.right {
+    width: 70%;
+    margin: 0 auto;
+    float: left;
+    background-color: white;
+}
+p, a {
+    font-size: 14px;
+    margin: 5px 20px;
+    text-align: justify;
+    line-height: 1.8;
+}
+.info {
+    margin-right: 20px;
+}
+.info p{
+    margin: 0 20px;
+    text-align: left;
+    line-height: 1.8;
+}
+.Des {
+    font-size: 20px;
+    margin-top: 0;
+    text-align: left;
+}
+
+.sectr {
+    font-size: 115%;
+    font-weight: bold;
+    margin: 10px 20px ;
+    padding: 5px 0px;
+    border-top: 1px solid rgb(224, 224, 224);
+    border-bottom: 1px solid rgb(224, 224, 224);
+}
+h1 {
+    color: rgb(56, 56, 56);
+    margin: 13px 20px 3px 20px;
+
+}
+.sectl {
+    font-size: 105%;
+    background-color: #C1C1C1;
+    padding: 8px 20px;
+}
+.container {
+    display: flex;
+}
+h3 {
+    margin: 5px 20px;
+    font-size: 100%;
+}
+.rhead {
+    font-size: 14px;
+    margin: 5px 20px;
+    font-style: italic;
+}
+.rleft {
+    float: left;
+    flex-shrink: 0;
+    width: 100px;
+}
+
+.rright {
+    float: right;
+    width: 600px;
+}
+
+.rrhead {
+    font-weight: bold;
+}
+ul {
+    padding: 0;
+    margin: 5px 40px;
+}
+li {
+    font-size: 14px;
+    text-align: justify;
+    line-height: 1.8;
+}
+.lhead {
+    font-weight: bold;
+    padding-top: 4px;
+}
+#bar, #progress {
+    margin: 5px 20px 20px 20px;
+    width: calc(100% - 50px);
+    height: 9px;
+    background-color: rgb(158, 158, 158);
+}
+#progress {
+    margin-left: 0;
+    width: calc(var(--index, 1));
+    background-color: white;
+}
+a:hover {
+    color: green;
+    text-decoration: none;
+}
+.left, .sectl {
+    box-shadow: inset -11px 0px 11px -5px rgba(0,0,0,0.45);
+}
+.dark,
+.dark * {
+    background-color: #3b3b3b;
+    color: #e6e6e6;
+
+}
