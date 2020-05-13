@@ -157,3 +157,15 @@ a:hover {
     color: #e6e6e6;
 
 }
+@media print {
+
+    .TOP * {
+      visibility: collapse;
+    }
+    body * {
+        visibility: visible;
+        position: relative;
+        left: 0;
+        top: 0;
+      }
+  }
