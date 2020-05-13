@@ -160,7 +160,7 @@ a:hover {
 @media print {
 
     .TOP * {
-      visibility: collapse;
+      visibility: hidden;
     }
     body * {
         visibility: visible;
