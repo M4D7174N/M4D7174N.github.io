@@ -162,10 +162,4 @@ a:hover {
     .TOP * {
       visibility: hidden;
     }
-    body * {
-        visibility: visible;
-        position: relative;
-        left: 0;
-        top: 0;
-      }
   }
