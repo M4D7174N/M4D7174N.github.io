@@ -36,7 +36,7 @@ img {
     margin: 10px 0;
 }
 
-#CV {
+.CV {
     width: 900px;
     margin: 8px auto 0 auto;
     display: flex;
@@ -151,11 +151,25 @@ a:hover {
 .left, .sectl {
     box-shadow: inset -11px 0px 11px -5px rgba(0,0,0,0.45);
 }
-.dark,
-.dark * {
-    background-color: #3b3b3b;
-    color: #e6e6e6;
+.dark {
+    background-color: #1e1e1e;
+}
 
+.dark *{
+    background-color: #161625;
+    color: #6C757D;
+
+}
+body[class*="dark"] [class="bar"] {
+    margin: 5px 20px 20px 20px;
+    width: calc(100% - 50px);
+    height: 9px;
+    background-color: rgb(129, 128, 128);
+}
+body[class*="dark"] [class="progress"]{
+    margin-left: 0;
+    width: calc(var(--index, 1));
+    background-color: #2d2d4d;
 }
 @media print {
 
@@ -163,3 +177,18 @@ a:hover {
       visibility: hidden;
     }
   }
+.hide {
+    width: 663px;
+    margin-right: calc((100% - 900px)/2);
+}
+
+.hide [class="left"] * {
+    visibility: hidden;
+}
+
+.hide [class="left"] {
+    width: 5%;
+}
+.hide [class="right"] {
+    width: 95%;
+}
