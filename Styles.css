@@ -162,13 +162,13 @@ li {
     font-weight: bold;
     padding-top: 4px;
 }
-#bar, #progress {
+.bar, .progress {
     margin: 5px 20px 20px 20px;
     width: calc(100% - 50px);
     height: 9px;
     background-color: rgb(158, 158, 158);
 }
-#progress {
+.progress {
     margin-left: 0;
     width: calc(var(--index, 1));
     background-color: white;
@@ -177,6 +177,12 @@ a:hover {
     color: green;
     text-decoration: none;
 }
+
+@media only screen and (max-width: 1000px) {
+    html {
+      background-attachment: scroll;
+    }
+  }
 
 .dark *{
     background-color: #161625;
