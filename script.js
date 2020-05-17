@@ -13,3 +13,19 @@ $( ".inner-ham" ).on("click", function() {
     $( ".CV" ).addClass( "hide" );
   }
 });
+
+const inpFile = document.getElementsByClassName("getval")[0];
+const previewContainer = document.getElementsByClassName("DP")[0];
+
+inpFile.addEventListener("change", function() {
+  const file = this.files[0];
+  if (file) {
+    const reader = new FileReader();
+
+    reader.addEventListener("load", function() {
+      previewContainer.setAttribute("style", "background-image: url(" + this.result + ")");
+    });
+
+    reader.readAsDataURL(file);
+  }
+})
