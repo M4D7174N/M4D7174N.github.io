@@ -28,4 +28,4 @@ inpFile.addEventListener("change", function() {
 
     reader.readAsDataURL(file);
   }
-})
+});
