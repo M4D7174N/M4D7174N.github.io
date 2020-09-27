@@ -259,7 +259,7 @@ $(document).ready(function(){
       forMdata = {"vel":$("#inputVel").val(), "dia":$("#inputDia").val(), "hl":$("#inputHead").val(), "flowrate":$("#inputFlow").val(), "dw":$("#inlineFormInput-1").val(), "dh":$("#inlineFormInput-2").val()};
       var formData = JSON.stringify(forMdata);
       $.ajax({
-        url: 'http://127.0.0.1:8000/calc/',
+        url: 'http://webcalc-api.herokuapp.com/calc/',
         contentType: false,
         data: formData,
         type: 'post',
