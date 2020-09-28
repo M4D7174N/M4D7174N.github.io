@@ -27,7 +27,20 @@ div {
     height: 60px;
     margin: 0 auto;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+}
+.banner li {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 20px;
+
+}
+.banner li a {
+    text-decoration: none;
+    color: black;
+}
+ul.banner{
+    list-style-type: none;
 }
 span {
     font-size: 15px;
@@ -85,7 +98,7 @@ img {
 
 }
 
-p, a {
+p, .info a {
     font-size: 14px;
     margin: 5px 20px;
     text-align: justify;
@@ -150,11 +163,11 @@ h3 {
 .rrhead {
     font-weight: bold;
 }
-ul {
+.rright ul {
     padding: 0;
     margin: 5px 40px;
 }
-li {
+.rright li {
     font-size: 14px;
     text-align: justify;
     line-height: 1.8;
@@ -185,40 +198,12 @@ a:hover {
     }
   }
 
-.dark *{
-    background-color: #161625;
-    color: #6C757D;
-
-}
-body[class*="dark"] [class="bar"] {
-    margin: 5px 20px 20px 20px;
-    width: calc(100% - 50px);
-    height: 9px;
-    background-color: rgb(129, 128, 128);
-}
-body[class*="dark"] [class="progress"]{
-    margin-left: 0;
-    width: calc(var(--index, 1));
-    background-color: #2d2d4d;
-}
 @media print {
 
     .TOP * {
       visibility: hidden;
     }
   }
-.hide {
-    width: calc(900px*0.7/0.95);
-    margin-right: calc((100% - 900px)/2);
-}
-
-.hide [class="left"] * {
-    display: none;
-}
-
-.hide [class="left"] {
-    width: 5%;
-}
-.hide [class="right"] {
-    width: 95%;
-}
+  ::-webkit-scrollbar { 
+    display: none; 
+    }
