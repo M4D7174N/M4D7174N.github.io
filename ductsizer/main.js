@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
     $('.btn-dark').on('click', function (evt) {
       $(".num").val('');
       $("#inlineFormInput-1").val('');
@@ -169,8 +170,9 @@ $(document).ready(function(){
         }  
         $("#inlineFormInput-2").val('');
         create_post_2();
-      }, 100);
+      }, 50);
     });
+    
     $("#inlineFormInput-2").keyup(function(){
       delay(function(){
         // $('#inputVel').val('');
@@ -203,8 +205,8 @@ $(document).ready(function(){
       }, 1000);
     });
 
-
-    function create_post() {
+    fetch("https://webcalc-api.herokuapp.com/calc/");
+    // function create_post() {
       // $.ajax({
       //     url : "/", // the endpoint
       //     type : "POST", // http method
@@ -253,7 +255,7 @@ $(document).ready(function(){
       //             " <a href='#' class='close'>&times;</a></div>"); // add the error to the dom
       //     }
       // });
-    };
+    // };
     function create_post_2() {
 
       forMdata = {"vel":$("#inputVel").val(), "dia":$("#inputDia").val(), "hl":$("#inputHead").val(), "flowrate":$("#inputFlow").val(), "dw":$("#inlineFormInput-1").val(), "dh":$("#inlineFormInput-2").val()};
