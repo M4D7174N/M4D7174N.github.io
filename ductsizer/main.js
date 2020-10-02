@@ -141,7 +141,6 @@ $(document).ready(function(){
   })();
     
     $("#inlineFormInput-1").keyup(function(){
-      delay(function(){
         // $('#inputVel').val('');
         // $('#inputHead').val('');
         if($(".flow-unit option:selected").text() == 'CFM' ){
@@ -170,7 +169,6 @@ $(document).ready(function(){
         }  
         $("#inlineFormInput-2").val('');
         create_post_2();
-      }, 50);
     });
     
     $("#inlineFormInput-2").keyup(function(){
@@ -206,6 +204,38 @@ $(document).ready(function(){
     });
 
     fetch("https://webcalc-api.herokuapp.com/calc/");
+    $('#myform').on('submit', function (e) {
+
+      forMdata = {"vel":$("#inputVel").val(), "dia":$("#inputDia").val(), "hl":$("#inputHead").val(), "flowrate":$("#inputFlow").val()};
+      var formData = JSON.stringify(forMdata);
+      e.preventDefault();
+      $.ajax({
+         url: 'https://webcalc-api.herokuapp.com/calc/',
+         contentType: false,
+         data: formData,
+         type: 'post',
+         success: function (response) {
+          $('.table').show();
+          $("#rn").text(response.rn.toFixed(0));
+          $("#ff").text(response.ff.toFixed(4));
+          $("#fv").text(response.fv.toFixed(2));
+          $("#ed").text(response.ed.toFixed(2));
+          $("#vp").text(response.vp.toFixed(2));
+          $("#hl").text(response.hl.toFixed(3));
+          $("#fa").text(response.fa.toFixed(2));
+          // console.log($("#inputHead").val())
+          $("#inputDia").val(response.dia_new.toFixed(0));
+          $("#inputVel").val(response.vel_new.toFixed(2));
+          $("#inputHead").val(response.hl_new.toFixed(3));
+          $('#inputFlow').val(response.flowrate_new.toFixed(0));
+          $("#inlineFormInput-1").prop('disabled', false);
+          $("#inlineFormInput-2").prop('disabled', false);
+                  },
+         error: function (response) {
+                     // use response to update html
+                  }
+        });
+   });
     // function create_post() {
       // $.ajax({
       //     url : "/", // the endpoint

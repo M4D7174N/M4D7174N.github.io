@@ -203,49 +203,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="main.js"></script> 
-<script>
 
-
-  $(document).ready(function () {
-     $('#myform').on('submit', function (e) {
-
-        forMdata = {"vel":$("#inputVel").val(), "dia":$("#inputDia").val(), "hl":$("#inputHead").val(), "flowrate":$("#inputFlow").val()};
-        var formData = JSON.stringify(forMdata);
-        e.preventDefault();
-        $.ajax({
-           url: 'https://webcalc-api.herokuapp.com/calc/',
-           contentType: false,
-           data: formData,
-           type: 'post',
-           success: function (response) {
-            $('.table').show();
-            $("#rn").text(response.rn.toFixed(0));
-            $("#ff").text(response.ff.toFixed(4));
-            $("#fv").text(response.fv.toFixed(2));
-            $("#ed").text(response.ed.toFixed(2));
-            $("#vp").text(response.vp.toFixed(2));
-            $("#hl").text(response.hl.toFixed(3));
-            $("#fa").text(response.fa.toFixed(2));
-            // console.log($("#inputHead").val())
-            $("#inputDia").val(response.dia_new.toFixed(0));
-            $("#inputVel").val(response.vel_new.toFixed(2));
-            $("#inputHead").val(response.hl_new.toFixed(3));
-            $('#inputFlow').val(response.flowrate_new.toFixed(0));
-            $("#inlineFormInput-1").prop('disabled', false);
-            $("#inlineFormInput-2").prop('disabled', false);
-                    },
-           error: function (response) {
-                       // use response to update html
-                    }
-          });
-     });
-    });
-
-  // const myform = document.getElementById('myform')
-  // console.log(myform);
-  // myform.addEventListener('submit', function(e){
-  //    e.preventDefault();
-  // })
-</script>
 </body>
 </html>
