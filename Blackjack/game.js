@@ -42,34 +42,28 @@ function renderGame(){
     completelist.innerHTML = ""
     for (i=0; i<cards.length; i+=1){
         sum += parseInt(cards[i][0])
-
-        if ((cards[i][1])==="k1.jpg"){
+        if ((cards[i][1])==="images/club/k1.jpg"){
             ace = true
+
         }
         completelist.innerHTML += "<li><img src=\'"+cards[i][1]+"\'></li>"
     }
-  
+    if(sum>21&&ace){
+        sum-=10
+
+    }
 
     if (sum<21){
         msg="Do you want to draw a new card?"
         document.querySelector("#newBtn").disabled = false
     }
-    else if (sum<31 && ace){
-        msg="Do you want to draw a new card?"
-        document.querySelector("#newBtn").disabled = false
-        cards[cards.indexOf(11)] = 1       
-    }
+
     else if(sum===21){
         msg="Black Jack!!!"
         document.querySelector("#newBtn").disabled = true
         document.querySelector("#stBtn").textContent = "NEW GAME"
     }
-    else if(sum===31 && ace){
-        msg="Black Jack!!!"
-        cards[cards.indexOf(11)] = 1
-        document.querySelector("#newBtn").disabled = true
-        document.querySelector("#stBtn").textContent = "NEW GAME" 
-    }
+
 
     else{
         msg="You are out of the game"
@@ -77,7 +71,6 @@ function renderGame(){
         document.querySelector("#stBtn").textContent = "NEW GAME"
 
     }
-
     document.querySelector("#greeting").textContent = msg
     document.querySelector("#sum").textContent += sum
 
