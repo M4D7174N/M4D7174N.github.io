@@ -2,10 +2,10 @@ let msg
 let cards
 let sum
 let cardList
-let img = []
-let div = document.getElementById("card-list")
 let aceCounter
 let imgs
+
+let div = document.getElementById("card-list")
 let completelist= document.getElementById("card-lists");
 
 document.querySelector("#card").textContent = "Cards: "
@@ -24,7 +24,8 @@ function genRand() {
 }
 
 function start(){
-    imgs = [[2,"images/club/k2.jpg"], 
+    imgs = [
+    [2,"images/club/k2.jpg"], 
     [3,"images/club/k3.jpg"], 
     [4,"images/club/k4.jpg"], 
     [5,"images/club/k5.jpg"], 
