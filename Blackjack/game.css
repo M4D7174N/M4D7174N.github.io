@@ -27,15 +27,18 @@ button{
 }
 #card-list {
 
-    height:240px;
+    height:360px;
     margin: 0 auto;
+}
+#card-lists {
+    padding: 0;
 }
 img{
     width: 80px;
     height: 100%;
     object-fit: cover;
     overflow: hidden;
-    margin: 0 10px;
+    margin: 0 5px;
 }
 ul {
     list-style-type: none;
